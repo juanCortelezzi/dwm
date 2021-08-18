@@ -66,7 +66,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *dapps[] = { "/bin/sh", "-c", "~/Documents/Bash-programes/tostadora/dapps", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dapps[] = { "dapps", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
@@ -108,11 +108,11 @@ static Key keys[] = {
 	{ MODKEY,			            XK_u,      spawn,	       SHCMD("$TERMINAL -e nmtui-connect")},     // manage wifi
 	{ MODKEY|ShiftMask,			    XK_b,      spawn,	       SHCMD("sxiv -ft ~/Pictures/Wallpapers")}, // set wallpaper
 	{ MODKEY,                       XK_semicolon,  spawn,      SHCMD("skippy-xd") },                     // view all apps
-	{ 0,                            XF86XK_MonBrightnessUp,    spawn,   SHCMD("~/Documents/Bash-programes/tostadora/brightness up 20")},
-	{ 0,                            XF86XK_MonBrightnessDown,  spawn,   SHCMD("~/Documents/Bash-programes/tostadora/brightness down 20")},
-	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,   SHCMD("~/Documents/Bash-programes/tostadora/volume up 10")},
-	{ 0,                            XF86XK_AudioLowerVolume,   spawn,   SHCMD("~/Documents/Bash-programes/tostadora/volume down 10")},
-	{ 0,                            XF86XK_AudioMute,          spawn,   SHCMD("~/Documents/Bash-programes/tostadora/volume mute 10")},
+	{ 0,                            XF86XK_MonBrightnessUp,    spawn,   SHCMD("brightness up 20")},
+	{ 0,                            XF86XK_MonBrightnessDown,  spawn,   SHCMD("brightness down 20")},
+	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,   SHCMD("volume up 10")},
+	{ 0,                            XF86XK_AudioLowerVolume,   spawn,   SHCMD("volume down 10")},
+	{ 0,                            XF86XK_AudioMute,          spawn,   SHCMD("volume mute 10")},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -124,7 +124,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_q,      spawn,          SHCMD("killall xinit") },
-	{ MODKEY|ShiftMask,			    XK_x,      spawn,	       SHCMD("~/Documents/Bash-programes/tostadora/reshut")},
+	{ MODKEY|ShiftMask,			    XK_x,      spawn,	       SHCMD("reshut")},
 };
 
 /* button definitions */
