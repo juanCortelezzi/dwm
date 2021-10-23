@@ -67,6 +67,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dapps[] = { "dapps", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *screenshot[] = { "screenshot", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *reshut[] = { "reshut", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
@@ -105,6 +106,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      shiftview,      {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY|ShiftMask,			    XK_s,      spawn,	       {.v = screenshot} },                      // screenshot
 	{ MODKEY,			            XK_w,      spawn,		   SHCMD("$BROWSER") },                      // open browser
 	{ MODKEY,			            XK_u,      spawn,	       SHCMD("$TERMINAL -e nmtui-connect")},     // manage wifi
 	{ MODKEY|ShiftMask,			    XK_b,      spawn,	       SHCMD("sxiv -ft ~/Pictures/Wallpapers")}, // set wallpaper
