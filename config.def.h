@@ -111,11 +111,11 @@ static Key keys[] = {
 	{ MODKEY,			            XK_u,      spawn,	       SHCMD("$TERMINAL -e nmtui-connect")},     // manage wifi
 	{ MODKEY|ShiftMask,			    XK_b,      spawn,	       SHCMD("sxiv -ft ~/Pictures/Wallpapers")}, // set wallpaper
 	{ MODKEY,                       XK_semicolon,  spawn,      SHCMD("skippy-xd") },                     // view all apps
-	{ 0,                            XF86XK_MonBrightnessUp,    spawn,   SHCMD("brightness up 20")},
-	{ 0,                            XF86XK_MonBrightnessDown,  spawn,   SHCMD("brightness down 20")},
-	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,   SHCMD("volume up 10")},
-	{ 0,                            XF86XK_AudioLowerVolume,   spawn,   SHCMD("volume down 10")},
-	{ 0,                            XF86XK_AudioMute,          spawn,   SHCMD("volume mute 10")},
+	{ 0,                            XF86XK_MonBrightnessUp,    spawn,   SHCMD("tostadora light inc")},
+	{ 0,                            XF86XK_MonBrightnessDown,  spawn,   SHCMD("tostadora light dec")},
+	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,   SHCMD("tostadora sound inc")},
+	{ 0,                            XF86XK_AudioLowerVolume,   spawn,   SHCMD("tostadora sound dec")},
+	{ 0,                            XF86XK_AudioMute,          spawn,   SHCMD("tostadora sound mute")},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
