@@ -35,7 +35,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	/* { "Gimp",     NULL,       NULL,       0,            1,           -1 }, */
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -110,7 +110,6 @@ static Key keys[] = {
 	{ MODKEY,			            XK_w,      spawn,		   SHCMD("$BROWSER") },                      // open browser
 	{ MODKEY,			            XK_u,      spawn,	       SHCMD("$TERMINAL -e nmtui-connect")},     // manage wifi
 	{ MODKEY|ShiftMask,			    XK_b,      spawn,	       SHCMD("sxiv -ft ~/Pictures/Wallpapers")}, // set wallpaper
-	{ MODKEY,                       XK_semicolon,  spawn,      SHCMD("skippy-xd") },                     // view all apps
 	{ 0,                            XF86XK_MonBrightnessUp,    spawn,   SHCMD("tostadora light inc")},
 	{ 0,                            XF86XK_MonBrightnessDown,  spawn,   SHCMD("tostadora light dec")},
 	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,   SHCMD("tostadora sound inc")},
