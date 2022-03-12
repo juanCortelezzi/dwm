@@ -109,7 +109,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,			    XK_s,      spawn,	       {.v = screenshot} },                      // screenshot
 	{ MODKEY,			            XK_w,      spawn,		   SHCMD("$BROWSER") },                      // open browser
 	{ MODKEY,			            XK_u,      spawn,	       SHCMD("$TERMINAL -e nmtui-connect")},     // manage wifi
-	{ MODKEY|ShiftMask,			    XK_b,      spawn,	       SHCMD("sxiv -ft ~/Pictures/Wallpapers")}, // set wallpaper
+	{ MODKEY|ShiftMask,			    XK_b,      spawn,	       SHCMD("nsxiv -ft ~/Pictures/wallpapers")}, // set wallpaper
 	{ 0,                            XF86XK_MonBrightnessUp,    spawn,   SHCMD("tostadora light inc")},
 	{ 0,                            XF86XK_MonBrightnessDown,  spawn,   SHCMD("tostadora light dec")},
 	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,   SHCMD("tostadora sound inc")},
